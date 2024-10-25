@@ -14,15 +14,22 @@ public class GildedRoseADefaultItemTest {
 	 */
 	@Test
 	public void testUpdateQualityDefault1() {
-		Item item = new Item("DEFAULT_ITEM", 15, 3);
+		String inputName = "DEFAULT_ITEM"; 
+		int inputSellIn = 15, inputQuality = 3;
+		Item item = new Item(inputName, inputSellIn, inputQuality);
 		Item[] items = new Item[] { item };
 		GildedRose app = new GildedRose(items);
-		app.updateQuality();
-		assertEquals("DEFAULT_ITEM", app.items[0].name);
-		assertEquals(14, app.items[0].sellIn);
-		assertEquals(2, app.items[0].quality);
-	}
 
+		app.updateQuality();
+
+		String expectedName = "DEFAULT_ITEM";
+		int expectedSellIn = 14, expectedQuality = 1;
+
+		assertEquals(expectedName, app.items[0].name);
+		assertEquals(expectedSellIn, app.items[0].sellIn);
+		assertEquals(expectedQuality, app.items[0].quality);
+	
+	}
 	/**
 	 * Method to test the variation in quality of the item for the non expired
 	 * Item.
