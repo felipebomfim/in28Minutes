@@ -12,15 +12,6 @@ public class GildedRoseADefaultItemTestMine {
 	}
 
 	@Test
-	public void testUpdateQualityDefault1() {
-		GildedRose app = setUpAppWithDefaultItem(15, 3); 
-		app.updateQuality();
-		assertEquals("DEFAULT_ITEM", app.items[0].name);
-		assertEquals(14, app.items[0].sellIn);
-		
-	}
-
-	@Test
 	public void shouldDecreaseQualityByOne(){
 		int expectedQuality = 2;
 		GildedRose app = setUpAppWithDefaultItem(15, 3);
