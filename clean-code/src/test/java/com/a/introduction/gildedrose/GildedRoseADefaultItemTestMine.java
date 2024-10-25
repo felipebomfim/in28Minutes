@@ -4,24 +4,29 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class GildedRoseADefaultItemTestMine {
+
+	private final int DEFAULT_QUALITY = 3; 
+
+	private final int NOT_EXPIRED_SELLIN = 15; 
+	private final int EXPIRED_SELLIN = -1; 
+	private final int DEFAULT_SELLIN = 10; 
 	
-	public GildedRose setUpAppWithDefaultItem(int sellIn,int quality){
+	private GildedRose createGildedRoseWithOneDefaultItem(int sellIn,int quality){
 		Item item = new Item("DEFAULT_ITEM", sellIn, quality);
 		Item[] items = new Item[] { item };
 		return new GildedRose(items);
 	}
 
 	@Test
-	public void shouldDecreaseQualityByOne(){
-		int expectedQuality = 2;
-		GildedRose app = setUpAppWithDefaultItem(15, 3);
+	public void shouldDecreaseQualityByOne_whenNotExpiredDefaultItem(){
+		GildedRose app = createGildedRoseWithOneDefaultItem(NOT_EXPIRED_SELLIN, DEFAULT_QUALITY);
 		app.updateQuality();
-		assertEquals(expectedQuality, app.items[0].quality);
+		assertEquals(DEFAULT_QUALITY-1, app.items[0].quality);
 	}
 
 	@Test
-	public void shouldHaveNameDefaultItem (){
-		GildedRose app = setUpAppWithDefaultItem(15, 3); 
+	public void shouldHaveNameDefaultItem_whenDefaultItem (){
+		GildedRose app = createGildedRoseWithOneDefaultItem(DEFAULT_SELLIN, DEFAULT_QUALITY); 
 		app.updateQuality();
 		assertEquals("DEFAULT_ITEM", app.items[0].name);
 		
@@ -29,25 +34,16 @@ public class GildedRoseADefaultItemTestMine {
 
 	@Test
 	public void shouldDecreaseSellInByOne (){
-		GildedRose app = setUpAppWithDefaultItem(15, 3); 
+		GildedRose app = createGildedRoseWithOneDefaultItem(DEFAULT_SELLIN, DEFAULT_QUALITY); 
 		app.updateQuality();
-		int expectedSellIn = 14;
-		assertEquals(expectedSellIn, app.items[0].sellIn);
+		assertEquals(DEFAULT_SELLIN-1, app.items[0].sellIn);
 		
 	}
-
-	/**
-	 * Method to test the variation in quality of the item for the non expired
-	 * Item.
-	 * 
-	 * The quality should decrease by 2 when the item is expired(Sell in  < 0) and sell in should decrease by 1.
-	 * 
-	 */
+	
 	@Test
-	public void shouldDecreaseQualityByTwoForExpiredItem() {
-		GildedRose app = setUpAppWithDefaultItem(-1, 3);
+	public void shouldDecreaseQualityByTwo_whenExpiredItem() {
+		GildedRose app = createGildedRoseWithOneDefaultItem(EXPIRED_SELLIN, DEFAULT_QUALITY);
 		app.updateQuality();
-		int expectedQuality = 1;
-		assertEquals(expectedQuality, app.items[0].quality);
+		assertEquals(DEFAULT_QUALITY-2, app.items[0].quality);
 	}
 }

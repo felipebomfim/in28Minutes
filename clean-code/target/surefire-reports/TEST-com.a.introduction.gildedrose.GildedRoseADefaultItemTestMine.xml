@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.042" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.047" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/felipe/Dev/in28Minutes/clean-code/target/surefire/surefirebooter15623573990310958510.jar /home/felipe/Dev/in28Minutes/clean-code/target/surefire 2024-10-25T14-44-25_909-jvmRun1 surefire15512776093029203163tmp surefire_09332166848174430935tmp"/>
+    <property name="sun.java.command" value="/home/felipe/Dev/in28Minutes/clean-code/target/surefire/surefirebooter4526210848490620535.jar /home/felipe/Dev/in28Minutes/clean-code/target/surefire 2024-10-25T15-22-58_553-jvmRun1 surefire5758775365526267600tmp surefire_010188833607508991214tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine"/>
     <property name="surefire.test.class.path" value="/home/felipe/Dev/in28Minutes/clean-code/target/test-classes:/home/felipe/Dev/in28Minutes/clean-code/target/classes:/home/felipe/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar:/home/felipe/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/felipe/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/felipe/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/felipe/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/felipe/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/home/felipe/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/home/felipe/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/felipe/Dev/in28Minutes/clean-code/target/surefire/surefirebooter15623573990310958510.jar"/>
+    <property name="surefire.real.class.path" value="/home/felipe/Dev/in28Minutes/clean-code/target/surefire/surefirebooter4526210848490620535.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+7-Ubuntu-1ubuntu224.04"/>
     <property name="user.name" value="felipe"/>
@@ -53,9 +53,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldHaveNameDefaultItem" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.021"/>
-  <testcase name="shouldDecreaseQualityByOne" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.003"/>
-  <testcase name="testUpdateQualityDefault1" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.001"/>
-  <testcase name="shouldDecreaseQualityByTwoForExpiredItem" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0"/>
-  <testcase name="shouldDecreaseSellInByOne" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0"/>
+  <testcase name="shouldDecreaseQualityByOne_whenNotExpiredDefaultItem" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.024"/>
+  <testcase name="shouldDecreaseSellInByOne" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.001"/>
+  <testcase name="shouldDecreaseQualityByTwo_whenExpiredItem" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.001"/>
+  <testcase name="shouldHaveNameDefaultItem_whenDefaultItem" classname="com.a.introduction.gildedrose.GildedRoseADefaultItemTestMine" time="0.002"/>
 </testsuite>
