@@ -1,0 +1,27 @@
+# Created at 2024-10-25T09:00:33.246
+java.io.FileNotFoundException: /home/felipe/Dev/in28Minutes/clean-code/target/surefire/surefire_012850166733590755345tmp (Arquivo ou diretório inexistente)
+
+# Created at 2024-10-25T09:00:33.247
+	at java.base/java.io.FileInputStream.open0(Native Method)
+
+# Created at 2024-10-25T09:00:33.247
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+
+# Created at 2024-10-25T09:00:33.247
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+
+# Created at 2024-10-25T09:00:33.247
+	at org.apache.maven.surefire.booter.SystemPropertyManager.loadProperties(SystemPropertyManager.java:63)
+
+# Created at 2024-10-25T09:00:33.247
+	at org.apache.maven.surefire.booter.SystemPropertyManager.setSystemProperties(SystemPropertyManager.java:69)
+
+# Created at 2024-10-25T09:00:33.247
+	at org.apache.maven.surefire.booter.ForkedBooter.setupBooter(ForkedBooter.java:95)
+
+# Created at 2024-10-25T09:00:33.248
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:464)
+
+# Created at 2024-10-25T09:00:33.248
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+
